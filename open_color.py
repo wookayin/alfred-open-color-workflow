@@ -183,12 +183,28 @@ for color in COLOR_CATEGORIES:
     for number, hexcode in enumerate(OPEN_COLORS[color]):
         items['%s-%d' % (color, number)] = hexcode
 
-def print_all_items():
-    lines = [
-        '<?xml version="1.0"?>',
-        '<items>',
-    ]
+XML_HEADER = ['<?xml version="1.0"?>', '<items>']
+XML_FOOTER = ['</items>']
+
+def print_category():
+    lines = []
+    for i, c in enumerate(COLOR_CATEGORIES):
+        lines.append(
+            '''
+            <item uid="oc-{i}-{c}" autocomplete="{c}" type="file" valid="no">
+                <title>{c}</title>
+                <icon>icons/{c}-6.png</icon>
+            </item>
+            '''.format(i=i, c=c)
+        )
+    print('\n'.join(XML_HEADER + lines + XML_FOOTER))
+
+
+def print_items(query):
+    lines = []
     for key, hexcode in items.iteritems():
+        if not query in key:
+            continue
         lines.append(
             '''
             <item uid="{key}" autocomplete="{key}" arg="{hexcode}" type="file">
@@ -199,11 +215,16 @@ def print_all_items():
             '''.format(key=key, hexcode=hexcode)
         )
 
-    lines += [
-        '</items>',
-    ]
+    if not lines:
+        lines.append(
+            '''
+            <item uid="no-result" type="file" valid="no">
+                <title>No Results Found</title>
+            </item>
+            '''
+        )
 
-    print('\n'.join(lines))
+    print('\n'.join(XML_HEADER + lines + XML_FOOTER))
 
 
 def hex2rgb(v):
@@ -227,10 +248,14 @@ def generate_icons():
 
 def main():
     import sys
-    if len(sys.argv) > 1 and sys.argv[1] == '--generate-icons':
+    arg = sys.argv[1] if len(sys.argv) > 1 else ''
+
+    if arg == '--generate-icons':
         generate_icons()
+    elif arg == '':
+        print_category()
     else:
-        print_all_items()
+        print_items(arg)
 
 if __name__ == '__main__':
     main()

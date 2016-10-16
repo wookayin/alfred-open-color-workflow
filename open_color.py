@@ -183,7 +183,7 @@ for color in COLOR_CATEGORIES:
     for number, hexcode in enumerate(OPEN_COLORS[color]):
         items['%s-%d' % (color, number)] = hexcode
 
-def main():
+def print_all_items():
     lines = [
         '<?xml version="1.0"?>',
         '<items>',
@@ -194,6 +194,7 @@ def main():
             <item uid="{key}" autocomplete="{key}" arg="{hexcode}" type="file">
                 <title>{key}</title>
                 <subtitle>{hexcode}</subtitle>
+                <icon>icons/{key}.png</icon>
             </item>
             '''.format(key=key, hexcode=hexcode)
         )
@@ -203,6 +204,33 @@ def main():
     ]
 
     print('\n'.join(lines))
+
+
+def hex2rgb(v):
+    v = v.lstrip('#')
+    L = len(v)
+    return tuple(int(v[i:i+L/3], 16) for i in range(0, L, L/3))
+
+def generate_icons():
+    # requires Pillow package to run with '--generate-icons' options
+    import os, os.path
+    from PIL import Image
+    if not os.path.exists('./icons'):
+        os.mkdir('./icons')
+
+    for key, hexcode in items.iteritems():
+        print ('Generating %10s : %s ...' % (key, hexcode))
+        pixel_rgb = hex2rgb(hexcode)
+        im = Image.new('RGB', (64, 64))
+        im.putdata([pixel_rgb] * (64*64))
+        im.save('./icons/%s.png' % key)
+
+def main():
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == '--generate-icons':
+        generate_icons()
+    else:
+        print_all_items()
 
 if __name__ == '__main__':
     main()

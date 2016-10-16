@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string>kr.wook.alfred-opencolors-workflow</string>
+	<key>category</key>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>D1695850-6EFE-4350-955A-48CE7AEDD890</key>

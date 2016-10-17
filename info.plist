@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>kr.wook.alfred-opencolors-workflow</string>
+	<string>kr.wook.alfred-open-color-workflow</string>
 	<key>category</key>
 	<string>Productivity</string>
 	<key>connections</key>

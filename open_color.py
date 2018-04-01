@@ -202,7 +202,7 @@ def print_category():
 
 def print_items(query):
     lines = []
-    for key, hexcode in items.iteritems():
+    for key, hexcode in items.items():
         if not query in key:
             continue
         lines.append(

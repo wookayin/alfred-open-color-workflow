@@ -118,6 +118,6 @@ Then search for the name of a file contained within that folder. Hit Return to o
 	<key>version</key>
 	<string>1.0</string>
 	<key>webaddress</key>
-	<string>https://github.com/wookayin/alfred-opencolors-workflow</string>
+	<string>https://github.com/wookayin/alfred-open-color-workflow</string>
 </dict>
 </plist>

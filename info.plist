@@ -37,6 +37,10 @@
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -81,8 +85,7 @@
 				<key>autopaste</key>
 				<true/>
 				<key>clipboardtext</key>
-				<string>{query}
-</string>
+				<string>{query}</string>
 				<key>transient</key>
 				<false/>
 			</dict>

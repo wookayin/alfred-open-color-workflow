@@ -16,4 +16,4 @@ Jongwook Choi ([@wookayin](https://github.com/wookayin))
 
 ## LICENSE
 
-[MIT](/LICENSE)
+[MIT](https://github.com/wookayin/alfred-open-color-workflow/blob/master/LICENSE)

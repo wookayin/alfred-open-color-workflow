@@ -1,23 +1,19 @@
-Alfred Open Color Workflow
-==========================
+# Alfred Open Color Workflow
 
-Easily paste [Open Color](https://yeun.github.io/open-color/) codes. Currently includes open-color 1.4.0
+Easily paste [Open Color](https://yeun.github.io/open-color/) codes. Currently uses Open Color version 1.4.0.
 
-[Download at Here](https://github.com/wookayin/alfred-open-color-workflow/releases)
+[Get the latest release here.](https://github.com/wookayin/alfred-open-color-workflow/releases)
 
+![Preview](/screenshots/preview.gif)
 
-![Screenshot 1](https://raw.github.com/wookayin/alfred-open-color-workflow/master/screenshots/oc-empty.png)
+## Usage
 
-![Screenshot 2](https://raw.github.com/wookayin/alfred-open-color-workflow/master/screenshots/oc-green.png)
+Toggle Alfred and type `oc` and optionally a color to see variations of that color.
 
+## Authors
 
-Authors
--------
+Jongwook Choi ([@wookayin](https://github.com/wookayin))
 
-Jongwook Choi (@wookayin)
+## LICENSE
 
-
-LICENSE
--------
-
-MIT
+[MIT](https://github.com/wookayin/alfred-open-color-workflow/blob/master/LICENSE)

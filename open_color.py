@@ -6,7 +6,7 @@ open_color.py -- Prints all open color items in Alfred XML format.
 '''
 
 # https://raw.githubusercontent.com/yeun/open-color/v1.4.0/open-color.json
-OPEN_COLORS_VERSION = '1.4.0'
+OPEN_COLORS_VERSION = '1.9.1'
 OPEN_COLORS = \
 {
   "white": "#ffffff",
@@ -84,16 +84,16 @@ OPEN_COLORS = \
     "#364fc7"
   ],
   "blue": [
-    "#e8f7ff",
-    "#ccedff",
-    "#a3daff",
-    "#72c3fc",
-    "#4dadf7",
-    "#329af0",
-    "#228ae6",
-    "#1c7cd6",
-    "#1b6ec2",
-    "#1862ab"
+    "#e7f5ff",
+    "#d0ebff",
+    "#a5d8ff",
+    "#74c0fc",
+    "#4dabf7",
+    "#339af0",
+    "#228be6",
+    "#1c7ed6",
+    "#1971c2",
+    "#1864ab"
   ],
   "cyan": [
     "#e3fafc",

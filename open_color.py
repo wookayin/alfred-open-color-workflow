@@ -230,7 +230,7 @@ def print_items(query):
 def hex2rgb(v):
     v = v.lstrip('#')
     L = len(v)
-    return tuple(int(v[i:i+L/3], 16) for i in range(0, L, L/3))
+    return tuple(int(v[i:i+L//3], 16) for i in range(0, L, L//3))
 
 def generate_icons():
     # requires Pillow package to run with '--generate-icons' options
@@ -239,7 +239,7 @@ def generate_icons():
     if not os.path.exists('./icons'):
         os.mkdir('./icons')
 
-    for key, hexcode in items.iteritems():
+    for key, hexcode in items.items():
         print ('Generating %10s : %s ...' % (key, hexcode))
         pixel_rgb = hex2rgb(hexcode)
         im = Image.new('RGB', (64, 64))

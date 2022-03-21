@@ -1,6 +1,6 @@
 # Alfred Open Color Workflow
 
-Easily paste [Open Color](https://yeun.github.io/open-color/) codes. Currently uses Open Color version 1.4.0.
+Easily paste [Open Color](https://yeun.github.io/open-color/) codes. Currently uses Open Color version 1.9.1.
 
 [Get the latest release here.](https://github.com/wookayin/alfred-open-color-workflow/releases)
 

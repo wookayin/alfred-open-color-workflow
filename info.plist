@@ -102,9 +102,9 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Using the keyword "ff", first search for the folder you want to use as search scope. 
+	<string>Easily paste Open Color codes.
 
-Then search for the name of a file contained within that folder. Hit Return to open the file, or Alt + Return to reveal it in Finder.</string>
+https://github.com/wookayin/alfred-open-color-workflow</string>
 	<key>uidata</key>
 	<dict>
 		<key>7A90D4BF-75D2-4FAC-A523-5C4CC93B9D78</key>
@@ -125,7 +125,7 @@ Then search for the name of a file contained within that folder. Hit Return to o
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.2</string>
+	<string>1.3.191</string>
 	<key>webaddress</key>
 	<string>https://github.com/wookayin/alfred-open-color-workflow</string>
 </dict>
